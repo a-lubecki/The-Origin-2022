@@ -23,7 +23,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 1
-  controlID: 60103
+  controlID: 2974
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -44,7 +44,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 856
+    x: 855
     y: 83
     width: 577.5
     height: 545
@@ -52,8 +52,10 @@ MonoBehaviour:
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
-  m_SerializedViewNames: []
-  m_SerializedViewValues: []
+  m_SerializedViewNames:
+  - UnityEditor.DeviceSimulation.SimulatorWindow
+  m_SerializedViewValues:
+  - /Users/nightmare/git/UIToolkitMenu/Library/PlayModeViewStates/e651c36c3bb1c4a2fabe6201d3dd8a7a
   m_PlayModeViewName: GameView
   m_ShowGizmos: 0
   m_TargetDisplay: 0
@@ -140,7 +142,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 60104
+  controlID: 2975
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,7 +167,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 60105
+  controlID: 2976
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -191,7 +193,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 60106
+  controlID: 2952
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -238,7 +240,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1
+    x: 0
     y: 83
     width: 207.5
     height: 545
@@ -251,7 +253,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: ae3afeff445bfeff2653ffff905dffff76eeffffe2f6ffff36fbfffff66c0000
+      m_ExpandedIDs: 1efbffffe65b0000125d0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -323,7 +325,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 209.5
+    x: 208.5
     y: 83
     width: 644.5
     height: 545
@@ -581,9 +583,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0.22361355, y: -0.609603, z: 0.18477954, w: -0.7377247}
   m_Size:
-    m_Target: 163.4024
+    m_Target: 162.91266
     speed: 2
-    m_Value: 163.4024
+    m_Value: 162.91266
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -774,7 +776,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1
+    x: 0
     y: 649
     width: 1433.5
     height: 348
@@ -803,14 +805,14 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Alubecki/UI
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: /Users/nightmare/git/TestUI
+  m_LastProjectPath: /Users/nightmare/git/UIToolkitMenu
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 386d0000
-    m_LastClickedID: 27960
-    m_ExpandedIDs: 00000000306d0000e094010000ca9a3b
+    m_SelectedIDs: 00b70000
+    m_LastClickedID: 46848
+    m_ExpandedIDs: 00000000c65e0000cc5e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -838,7 +840,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000306d000000ca9a3b
+    m_ExpandedIDs: 00000000c65e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -863,9 +865,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 4af4fdff
-    m_LastClickedInstanceID: -134070
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: ee5d0000
+    m_LastClickedInstanceID: 24046
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000ce8a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -914,7 +916,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1
+    x: 0
     y: 649
     width: 1433.5
     height: 348
@@ -952,7 +954,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -134070
+  m_LastSelectedObjectID: 23826
 --- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -963,7 +965,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: InspectorWindow
+  m_Name: ProjectSettingsWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -972,15 +974,15 @@ MonoBehaviour:
     y: 0
     width: 456.5
     height: 935
-  m_MinSize: {x: 276, y: 71}
+  m_MinSize: {x: 311, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 18}
+  m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 18}
   - {fileID: 19}
   - {fileID: 20}
-  m_Selected: 0
-  m_LastSelected: 2
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1001,7 +1003,7 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1435.5
+    x: 1434.5
     y: 83
     width: 455.5
     height: 914
@@ -1015,7 +1017,7 @@ MonoBehaviour:
     m_CachedPref: 160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -134070
+  m_LastInspectedObjectInstanceID: 24046
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
@@ -1042,8 +1044,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1547.5
-    y: 98
+    x: 1434.5
+    y: 83
     width: 455.5
     height: 914
   m_ViewDataDictionary: {fileID: 0}
@@ -1057,8 +1059,8 @@ MonoBehaviour:
   m_SearchText: 
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: a73eced7
-    m_LastClickedID: -674349401
+    m_SelectedIDs: 7b59923f
+    m_LastClickedID: 1066555771
     m_ExpandedIDs: a01a5fa600000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0

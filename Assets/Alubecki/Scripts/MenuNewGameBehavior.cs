@@ -1,4 +1,5 @@
 using UnityEngine.Events;
+using UnityEngine.UIElements;
 
 
 public class MenuNewGameBehavior : BaseMenuBehavior {
@@ -11,8 +12,7 @@ public class MenuNewGameBehavior : BaseMenuBehavior {
     public GameDifficulty difficulty;
 
 
-    protected override void Awake() {
-        base.Awake();
+    protected override void InitUI(UIDocument doc) {
 
         InitButton("ButtonBack", eventOnBack);
         InitButton("ButtonEasy", eventOnDifficultyChosen, () => difficulty = GameDifficulty.EASY);

@@ -6,19 +6,25 @@ using UnityEngine.UIElements;
 
 
 [RequireComponent(typeof(UIDocument))]
-public class BaseMenuBehavior : MonoBehaviour {
+public abstract class BaseMenuBehavior : MonoBehaviour {
 
 
     UIDocument document;
     List<Button> buttons = new List<Button>();
 
 
+    protected abstract void InitUI(UIDocument doc);
+
     protected virtual void Awake() {
 
         document = GetComponent<UIDocument>();
     }
 
-    protected virtual void Start() {
+    protected virtual void OnEnable() {
+
+        //reinit UI references every time the game object become active to avoid a bug with the buttons click
+        buttons.Clear();
+        InitUI(document);
 
         EnableAllButtons();
     }

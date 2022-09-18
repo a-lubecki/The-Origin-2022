@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class MenusManager : MonoBehaviour {
@@ -10,6 +12,10 @@ public class MenusManager : MonoBehaviour {
     [SerializeField] GameObject goMenuNewGame;
     [SerializeField] GameObject goMenuSettings;
 
+
+    void Awake() {
+        HideAllMenus();
+    }
 
     void Start() {
         ShowMenuMain();
@@ -82,6 +88,7 @@ public class MenusManager : MonoBehaviour {
 
         cameraManager.SelectVCamStartGame();
 
+        StartCoroutine(DoActionAfterDelay(2f, () => SceneManager.LoadScene(0)));
     }
 
     void QuitGame() {
@@ -90,6 +97,20 @@ public class MenusManager : MonoBehaviour {
 
         cameraManager.SelectVCamQuitGame();
 
+        StartCoroutine(DoActionAfterDelay(2f, () => {
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#else
+            Application.Quit();
+#endif
+        }));
+    }
+
+    IEnumerator DoActionAfterDelay(float delaySec, Action action) {
+
+        yield return new WaitForSeconds(delaySec);
+
+        action.Invoke();
     }
 
     IEnumerator ShowMenuAfterDelay(GameObject goMenu) {

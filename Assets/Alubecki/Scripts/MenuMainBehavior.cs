@@ -1,4 +1,6 @@
+using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UIElements;
 
 
 public class MenuMainBehavior : BaseMenuBehavior {
@@ -10,11 +12,10 @@ public class MenuMainBehavior : BaseMenuBehavior {
     public UnityEvent eventOnQuitGame;
 
 
-    protected override void Awake() {
-        base.Awake();
+    protected override void InitUI(UIDocument doc) {
 
-        InitButton("ButtonNewGame", eventOnNewGame);
         InitButton("ButtonContinue", eventOnContinue);
+        InitButton("ButtonNewGame", eventOnNewGame);
         InitButton("ButtonSettings", eventOnSettings);
         InitButton("ButtonQuitGame", eventOnQuitGame);
     }
