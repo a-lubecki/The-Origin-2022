@@ -8,6 +8,7 @@ public class MenusManager : MonoBehaviour {
 
 
     [SerializeField] CameraManager cameraManager;
+    [SerializeField] PostProcessingManager postProcessingManager;
     [SerializeField] GameObject goMenuMain;
     [SerializeField] GameObject goMenuNewGame;
     [SerializeField] GameObject goMenuSettings;
@@ -87,6 +88,7 @@ public class MenusManager : MonoBehaviour {
         HideAllMenus();
 
         cameraManager.SelectVCamStartGame();
+        postProcessingManager.SetWhiteScreen();
 
         StartCoroutine(DoActionAfterDelay(2f, () => SceneManager.LoadScene(0)));
     }
@@ -96,6 +98,7 @@ public class MenusManager : MonoBehaviour {
         HideAllMenus();
 
         cameraManager.SelectVCamQuitGame();
+        postProcessingManager.SetBlackScreen();
 
         StartCoroutine(DoActionAfterDelay(2f, () => {
 #if UNITY_EDITOR
