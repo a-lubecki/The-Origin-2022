@@ -1,0 +1,20 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Alubecki/UI/Circle.uss?fileID=7433441132597879392&amp;guid=684587bae7a2148fcb51cf59af52c98d&amp;type=3#Circle" />
+    <ui:VisualElement name="Circle0" class="circle" style="background-image: url(&apos;project://database/Assets/Alubecki/Images/circle0.png?fileID=21300000&amp;guid=61e33b1cc9f6d4a5c99927522bb6404f&amp;type=3#circle0&apos;); width: 168px; height: 168px;" />
+    <ui:VisualElement name="Circle3" class="circle" style="background-image: url(&apos;project://database/Assets/Alubecki/Images/circle2.png?fileID=21300000&amp;guid=d630fb63578eb41f7a5014b1bb345a9d&amp;type=3#circle2&apos;); width: 264px; height: 264px;" />
+    <ui:VisualElement name="Circle2" class="circle" style="background-image: url(&apos;project://database/Assets/Alubecki/Images/circle2.png?fileID=21300000&amp;guid=d630fb63578eb41f7a5014b1bb345a9d&amp;type=3#circle2&apos;); width: 220px; height: 220px;" />
+    <ui:VisualElement name="Circle1" class="circle" style="background-image: url(&apos;project://database/Assets/Alubecki/Images/circle1.png?fileID=21300000&amp;guid=66967716cfb014a36a2cacf93cb8d31d&amp;type=3#circle1&apos;); width: 192px; height: 192px;" />
+    <ui:VisualElement style="left: 0; top: 0; right: 0; bottom: 0; position: absolute; align-items: center;">
+        <ui:VisualElement name="LineTop" style="background-image: url(&apos;project://database/Assets/Alubecki/Images/screen-line-top.png?fileID=21300000&amp;guid=5024d256460304fe198f0c8ba2e5c3b0&amp;type=3#screen-line-top&apos;); position: absolute; top: 20px; width: 1808px; height: 88px; -unity-background-scale-mode: scale-to-fit; align-items: center;">
+            <ui:Button text="QUIT GAME" display-tooltip-when-elided="true" name="ButtonQuitGame" style="left: 0; position: absolute; top: 8px;" />
+            <ui:VisualElement style="background-image: url(&apos;project://database/Assets/Alubecki/Images/screen-bg-title.png?fileID=21300000&amp;guid=dd05dbe06cea1432bada0d3e238362a3&amp;type=3#screen-bg-title&apos;); width: 900px; height: 80px; align-items: center; justify-content: center;">
+                <ui:Label text="Title" display-tooltip-when-elided="true" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="LineBottom" style="background-image: url(&apos;project://database/Assets/Alubecki/Images/screen-line-bottom.png?fileID=21300000&amp;guid=5c69924fcc50449f399db67cd185c34e&amp;type=3#screen-line-bottom&apos;); width: 1780px; height: 40px; position: absolute; bottom: 30px; align-items: center; -unity-background-scale-mode: scale-to-fit;">
+            <ui:VisualElement name="GameTitle" style="background-image: url(&apos;project://database/Assets/Alubecki/Images/game-title.png?fileID=21300000&amp;guid=41bc047f512334b9ab1f6bae77120c2d&amp;type=3#game-title&apos;); width: 416px; height: 272px; position: absolute; left: 0; bottom: 16px;" />
+            <ui:Label text="Version 1.1.2504" display-tooltip-when-elided="true" name="Version" class="h1" style="left: 600px; position: absolute; top: 16px;" />
+            <ui:Label text="@ 2022 Fake Studio" display-tooltip-when-elided="true" name="Copyright" class="h1" style="position: absolute; right: 600px; top: 16px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

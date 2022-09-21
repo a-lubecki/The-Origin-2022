@@ -49,11 +49,11 @@ MonoBehaviour:
     overrideState: 0
     value: 0
   speedUp:
-    overrideState: 0
-    value: 2
+    overrideState: 1
+    value: 10
   speedDown:
-    overrideState: 0
-    value: 1
+    overrideState: 1
+    value: 0.5
 --- !u!114 &3504536417772805842
 MonoBehaviour:
   m_ObjectHideFlags: 3

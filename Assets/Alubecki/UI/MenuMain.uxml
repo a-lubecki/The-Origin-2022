@@ -1,6 +1,7 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:Button text="Continue" display-tooltip-when-elided="true" name="ButtonContinue" />
+    <Style src="project://database/Assets/Alubecki/UI/Main.uss?fileID=7433441132597879392&amp;guid=70f9c789155f84dfda888c3fff44905b&amp;type=3#Main" />
     <ui:Button text="New game" display-tooltip-when-elided="true" name="ButtonNewGame" />
     <ui:Button text="Settings" display-tooltip-when-elided="true" name="ButtonSettings" style="height: 19px;" />
-    <ui:Button text="Quit game" display-tooltip-when-elided="true" name="ButtonQuitGame" />
+    <ui:Button text="Settings" display-tooltip-when-elided="true" name="ButtonCredits" style="height: 19px;" />
+    <ui:Button text="Continue" display-tooltip-when-elided="true" name="ButtonContinue" />
 </ui:UXML>
