@@ -17,7 +17,10 @@ public class MenuMainBehavior : BaseMenuBehavior {
         InitButton("ButtonContinue", eventOnContinue);
         InitButton("ButtonNewGame", eventOnNewGame);
         InitButton("ButtonSettings", eventOnSettings);
-        InitButton("ButtonQuitGame", eventOnQuitGame);
+        //InitButton("ButtonQuitGame", eventOnQuitGame);
+
+        var button = doc.rootVisualElement.Q<VisualElement>("ButtonQuitGame");
+        Debug.Log("BUTTON : " + button);
     }
 
 }

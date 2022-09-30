@@ -1,0 +1,14 @@
+.hidden-animated {
+    opacity: 0;
+    transition-duration: 3s;
+    transition-delay: 1s;
+}
+
+.visible-animated {
+    opacity: 1;
+    transition-duration: 3s;
+}
+
+.hidden {
+    opacity: 0;
+}

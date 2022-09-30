@@ -2091,9 +2091,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 567231833}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96cbdaa2ccb344bb289d37e04a5b6636, type: 3}
+  m_Script: {fileID: 11500000, guid: 79c528e148dfd4bc185f50f3e89aed1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <ScreenTitle>k__BackingField: 
   eventOnNewGame:
     m_PersistentCalls:
       m_Calls:
@@ -6434,6 +6435,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1333186428}
   - component: {fileID: 1333186429}
+  - component: {fileID: 1333186430}
   m_Layer: 0
   m_Name: Decorations
   m_TagString: Untagged
@@ -6448,7 +6450,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1333186427}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -6471,7 +6473,20 @@ MonoBehaviour:
   m_PanelSettings: {fileID: 11400000, guid: 20be5a8978d05448fb2e4709b170b462, type: 2}
   m_ParentUI: {fileID: 0}
   sourceAsset: {fileID: 9197481963319205126, guid: 0119a6f5e6e2f4be6a3f07894160f78d, type: 3}
-  m_SortingOrder: 0
+  m_SortingOrder: -1
+--- !u!114 &1333186430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1333186427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f37042f5f81c4a3dbe26078733cb895, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <ScreenTitle>k__BackingField: 
 --- !u!1001 &1344128907
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6696,9 +6711,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1381127315}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dda4ba990d1d94224864819447e424ad, type: 3}
+  m_Script: {fileID: 11500000, guid: f260c8655168b4bbe8d8986e63a70383, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <ScreenTitle>k__BackingField: SETTINGS
   eventOnBack:
     m_PersistentCalls:
       m_Calls:
@@ -7184,9 +7200,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraManager: {fileID: 596557347}
   postProcessingManager: {fileID: 596071901}
-  goMenuMain: {fileID: 567231833}
-  goMenuNewGame: {fileID: 2093718446}
-  goMenuSettings: {fileID: 1381127315}
+  decorations: {fileID: 1333186430}
+  menuMain: {fileID: 567231836}
+  menuNewGame: {fileID: 2093718450}
+  menuSettings: {fileID: 1381127319}
 --- !u!1001 &1504285290
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9907,9 +9924,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2093718446}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 711aaff0b2fa5418694a6bd30211169c, type: 3}
+  m_Script: {fileID: 11500000, guid: ce620063b27af41bab06e9f4816fc147, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <ScreenTitle>k__BackingField: NEW GAME
   eventOnBack:
     m_PersistentCalls:
       m_Calls:

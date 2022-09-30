@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Alubecki/UI/Components/Buttons.uss?fileID=7433441132597879392&amp;guid=574804cbc05ee4ca0b33a57b0783b0d1&amp;type=3#Buttons" />
+    <ui:VisualElement name="Container" class="button-confirm" style="flex-direction: row; align-items: center;">
+        <ui:Button text="BUTTON" display-tooltip-when-elided="true" />
+        <ui:VisualElement class="square square-back" style="position: relative; margin-left: 0; margin-top: 0; margin-bottom: 0; right: 14px; margin-right: 0;" />
+    </ui:VisualElement>
+</ui:UXML>

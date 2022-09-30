@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Alubecki/UI/Styles/Components.uss?fileID=7433441132597879392&amp;guid=574804cbc05ee4ca0b33a57b0783b0d1&amp;type=3#Components" />
+    <ui:VisualElement name="Container" class="button-destructive" style="flex-direction: row; align-items: center;">
+        <ui:Button text="QUIT GAME" display-tooltip-when-elided="true" style="padding-left: 80px;" />
+        <ui:VisualElement class="square square-back" style="position: absolute; left: 28px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0;" />
+    </ui:VisualElement>
+</ui:UXML>

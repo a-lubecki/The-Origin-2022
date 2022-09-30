@@ -1,0 +1,23 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="QuitButton" src="project://database/Assets/Alubecki/UI/Components/QuitButton.uxml?fileID=9197481963319205126&amp;guid=d0ac5a4fe00cf49e798c2a7adbfb5ee0&amp;type=3#QuitButton" />
+    <ui:Template name="PanelAd" src="project://database/Assets/Alubecki/UI/Panels/PanelAd.uxml?fileID=9197481963319205126&amp;guid=e468753aefbc047808d33829eaccffa0&amp;type=3#PanelAd" />
+    <ui:Template name="FloatingButton" src="project://database/Assets/Alubecki/UI/Components/FloatingButton.uxml?fileID=9197481963319205126&amp;guid=191751ac5ee8c4c5ab7c41d5759b7779&amp;type=3#FloatingButton" />
+    <Style src="project://database/Assets/Alubecki/UI/Styles/Main.uss?fileID=7433441132597879392&amp;guid=70f9c789155f84dfda888c3fff44905b&amp;type=3#Main" />
+    <Style src="project://database/Assets/Alubecki/UI/Styles/Components.uss?fileID=7433441132597879392&amp;guid=574804cbc05ee4ca0b33a57b0783b0d1&amp;type=3#Components" />
+    <ui:VisualElement name="Body" style="left: 0; top: 0; right: 0; bottom: 0; position: absolute;">
+        <ui:Button text="Settings" display-tooltip-when-elided="true" name="ButtonCredits" style="height: 19px; position: absolute;" />
+        <ui:Button text="Continue" display-tooltip-when-elided="true" name="ButtonContinue" style="position: absolute;" />
+        <ui:Button text="New game" display-tooltip-when-elided="true" name="ButtonNewGame" style="position: absolute;" />
+        <ui:Button text="Settings" display-tooltip-when-elided="true" name="ButtonSettings" style="height: 19px; position: absolute;" />
+        <ui:VisualElement name="Top" style="width: 1808px; translate: -50% 0; left: 50%; position: absolute; top: 30px; flex-direction: row;">
+            <ui:Instance template="QuitButton" name="ButtonQuitGame" style="top: 16px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Bottom" style="bottom: 40px; position: absolute; width: 1780px; translate: -50% 0; left: 50%;">
+            <ui:VisualElement name="GameTitle" style="background-image: url(&apos;project://database/Assets/Alubecki/Images/game-title.png?fileID=21300000&amp;guid=41bc047f512334b9ab1f6bae77120c2d&amp;type=3#game-title&apos;); width: 416px; height: 272px; position: absolute; bottom: 16px;" />
+            <ui:Label text="Version 1.1.2504" display-tooltip-when-elided="true" name="Version" class="subtitle" style="position: absolute; left: 600px; bottom: -16px;" />
+            <ui:Label text="@ 2022 Fake Studio" display-tooltip-when-elided="true" name="Copyright" class="subtitle" style="position: absolute; right: 600px; bottom: -16px;" />
+            <ui:Instance template="PanelAd" name="PanelAd" style="width: 530px; height: 350px; bottom: 16px; right: 0; position: absolute;" />
+        </ui:VisualElement>
+        <ui:Instance template="FloatingButton" name="FloatingButton" style="position: absolute; top: 472px; left: 370px;" />
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,117 @@
+Label {
+    -unity-font-definition: url('project://database/Assets/Alubecki/Fonts/Rajdhani/Rajdhani-SemiBold%20SDF.asset?fileID=11400000&guid=a665e4798cb8b406d958d18a86c56826&type=2#Rajdhani-SemiBold SDF');
+    font-size: 36px;
+    color: rgb(255, 255, 255);
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+Label.h1 {
+    -unity-font-definition: url('project://database/Assets/Alubecki/Fonts/Electrolize/Electrolize-Regular%20SDF.asset?fileID=11400000&guid=b0a424798be0040be866dbda737a1e2f&type=2#Electrolize-Regular SDF');
+    font-size: 40px;
+}
+
+Label.h2 {
+    -unity-font-definition: url('project://database/Assets/Alubecki/Fonts/Electrolize/Electrolize-Regular%20SDF.asset?fileID=11400000&guid=b0a424798be0040be866dbda737a1e2f&type=2#Electrolize-Regular SDF');
+    font-size: 30px;
+}
+
+Label.subtitle {
+    font-size: 24px;
+    -unity-font-definition: url('project://database/Assets/Alubecki/Fonts/Rajdhani/Rajdhani-Regular%20SDF.asset?fileID=11400000&guid=266b02ec01e8b4d9cbe7df0b0082a1bf&type=2#Rajdhani-Regular SDF');
+}
+
+Button {
+    height: 90px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 40px;
+    -unity-font-definition: url('project://database/Assets/Alubecki/Fonts/Electrolize/Electrolize-Regular%20SDF.asset?fileID=11400000&guid=b0a424798be0040be866dbda737a1e2f&type=2#Electrolize-Regular SDF');
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+}
+
+.button-default > * {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: rgb(102, 102, 102);
+}
+
+.button-default:hover > * {
+    background-color: rgba(255, 238, 170, 0.9);
+}
+
+.button-default:hover > .square-back {
+    translate: -8px 0;
+    transition-duration: 0.2s, 0.2s;
+    scale: 0.5 0.5;
+    transition-property: translate, scale;
+}
+
+.button-confirm > Button {
+    background-color: rgba(60, 150, 0, 0.9);
+    color: rgb(255, 255, 255);
+    border-left-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-top-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
+    border-left-width: 4px;
+    border-right-width: 4px;
+    border-top-width: 4px;
+    border-bottom-width: 4px;
+}
+
+.button-confirm:hover > Button {
+    background-color: rgba(198, 231, 177, 0.9);
+    color: rgb(102, 102, 102);
+}
+
+.button-confirm:hover > .square {
+    translate: 24px 0;
+    transition-property: translate;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out-back;
+}
+
+.button-destructive > Button {
+    color: rgb(255, 255, 255);
+    background-color: rgb(171, 53, 53);
+}
+
+.button-destructive:hover > Button {
+    background-color: rgba(245, 211, 211, 0.9);
+    color: rgb(102, 102, 102);
+}
+
+.button-destructive:hover > .square {
+    transition-duration: 1.5s;
+    rotate: -180deg;
+    transition-property: rotate;
+    transition-timing-function: ease-out-elastic;
+}
+
+.line {
+    background-color: rgb(255, 255, 255);
+    height: 4px;
+}
+
+.square {
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
+    margin-right: 8px;
+    background-color: rgb(255, 255, 255);
+}

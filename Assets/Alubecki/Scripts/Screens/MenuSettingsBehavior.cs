@@ -2,7 +2,7 @@ using UnityEngine.Events;
 using UnityEngine.UIElements;
 
 
-public class MenuSettings : BaseMenuBehavior {
+public class MenuSettingsBehavior : BaseMenuBehavior {
 
 
     public UnityEvent eventOnBack;

@@ -9,16 +9,17 @@ public class MenusManager : MonoBehaviour {
 
     [SerializeField] CameraManager cameraManager;
     [SerializeField] PostProcessingManager postProcessingManager;
-    [SerializeField] GameObject goMenuMain;
-    [SerializeField] GameObject goMenuNewGame;
-    [SerializeField] GameObject goMenuSettings;
+    [SerializeField] DecorationsBehavior decorations;
+    [SerializeField] MenuMainBehavior menuMain;
+    [SerializeField] MenuNewGameBehavior menuNewGame;
+    [SerializeField] MenuSettingsBehavior menuSettings;
 
-
-    void Awake() {
-        HideAllMenus();
-    }
 
     void Start() {
+
+        HideAllMenus(false);
+
+        decorations.Show(true);
         ShowMenuMain();
     }
 
@@ -36,7 +37,7 @@ public class MenusManager : MonoBehaviour {
 
     public void OnSelectNewGameDifficulty() {
 
-        Debug.Log("Selected game difficulty " + goMenuNewGame.GetComponent<MenuNewGameBehavior>()?.difficulty);
+        Debug.Log("Selected game difficulty " + menuNewGame.difficulty);
 
         StartGame();
     }
@@ -49,43 +50,45 @@ public class MenusManager : MonoBehaviour {
         QuitGame();
     }
 
-    void HideAllMenus() {
+    void HideAllMenus(bool animated) {
 
-        goMenuMain.SetActive(false);
-        goMenuNewGame.SetActive(false);
-        goMenuSettings.SetActive(false);
+        decorations.UpdateScreenTitle(null);
+
+        menuMain.Hide(animated);
+        menuNewGame.Hide(animated);
+        menuSettings.Hide(animated);
     }
 
     void ShowMenuMain() {
 
-        HideAllMenus();
+        HideAllMenus(true);
 
         cameraManager.SelectVCamMainMenu();
 
-        StartCoroutine(ShowMenuAfterDelay(goMenuMain));
+        StartCoroutine(ShowMenuAfterDelay(menuMain));
     }
 
     void ShowNewGameMenu() {
 
-        HideAllMenus();
+        HideAllMenus(true);
 
         cameraManager.SelectVCamNewGame();
 
-        StartCoroutine(ShowMenuAfterDelay(goMenuNewGame));
+        StartCoroutine(ShowMenuAfterDelay(menuNewGame));
     }
 
     void ShowMenuSettings() {
 
-        HideAllMenus();
+        HideAllMenus(true);
 
         cameraManager.SelectVCamSettings();
 
-        StartCoroutine(ShowMenuAfterDelay(goMenuSettings));
+        StartCoroutine(ShowMenuAfterDelay(menuSettings));
     }
 
     void StartGame() {
 
-        HideAllMenus();
+        HideAllMenus(true);
 
         cameraManager.SelectVCamStartGame();
         postProcessingManager.SetWhiteScreen();
@@ -95,7 +98,7 @@ public class MenusManager : MonoBehaviour {
 
     void QuitGame() {
 
-        HideAllMenus();
+        HideAllMenus(true);
 
         cameraManager.SelectVCamQuitGame();
         postProcessingManager.SetBlackScreen();
@@ -116,11 +119,12 @@ public class MenusManager : MonoBehaviour {
         action.Invoke();
     }
 
-    IEnumerator ShowMenuAfterDelay(GameObject goMenu) {
+    IEnumerator ShowMenuAfterDelay(BaseMenuBehavior menu) {
 
         yield return new WaitForSeconds(1);
 
-        goMenu.SetActive(true);
+        menu.Show(true);
+        decorations.UpdateScreenTitle(menu.ScreenTitle);
     }
 
 }

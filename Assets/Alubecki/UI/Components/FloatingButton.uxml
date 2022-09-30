@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Alubecki/UI/Components/FloatingButton.uss?fileID=7433441132597879392&amp;guid=574804cbc05ee4ca0b33a57b0783b0d1&amp;type=3#FloatingButton" />
+    <ui:VisualElement name="Container" class="button-default" style="flex-direction: row; align-items: flex-end;">
+        <ui:Button text="BUTTON" display-tooltip-when-elided="true" />
+        <ui:VisualElement class="square" />
+    </ui:VisualElement>
+    <ui:VisualElement class="line" style="margin-top: 8px;" />
+</ui:UXML>
