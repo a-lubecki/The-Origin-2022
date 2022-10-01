@@ -5,10 +5,10 @@
     <Style src="project://database/Assets/Alubecki/UI/Styles/Main.uss?fileID=7433441132597879392&amp;guid=70f9c789155f84dfda888c3fff44905b&amp;type=3#Main" />
     <Style src="project://database/Assets/Alubecki/UI/Styles/Components.uss?fileID=7433441132597879392&amp;guid=574804cbc05ee4ca0b33a57b0783b0d1&amp;type=3#Components" />
     <ui:VisualElement name="Body" style="left: 0; top: 0; right: 0; bottom: 0; position: absolute;">
-        <ui:Button text="Settings" display-tooltip-when-elided="true" name="ButtonCredits" style="height: 19px; position: absolute;" />
-        <ui:Button text="Continue" display-tooltip-when-elided="true" name="ButtonContinue" style="position: absolute;" />
-        <ui:Button text="New game" display-tooltip-when-elided="true" name="ButtonNewGame" style="position: absolute;" />
-        <ui:Button text="Settings" display-tooltip-when-elided="true" name="ButtonSettings" style="height: 19px; position: absolute;" />
+        <ui:Instance template="FloatingButton" name="ButtonContinue" style="position: absolute; top: 228px; left: -2px;" />
+        <ui:Instance template="FloatingButton" name="ButtonNewGame" style="position: absolute; top: 404px; left: 68px;" />
+        <ui:Instance template="FloatingButton" name="ButtonSettings" style="position: absolute; top: 84px; left: 840px;" />
+        <ui:Instance template="FloatingButton" name="ButtonCredits" style="position: absolute; top: 256px; left: 900px;" />
         <ui:VisualElement name="Top" style="width: 1808px; translate: -50% 0; left: 50%; position: absolute; top: 30px; flex-direction: row;">
             <ui:Instance template="QuitButton" name="ButtonQuitGame" style="top: 16px;" />
         </ui:VisualElement>
@@ -18,6 +18,5 @@
             <ui:Label text="@ 2022 Fake Studio" display-tooltip-when-elided="true" name="Copyright" class="subtitle" style="position: absolute; right: 600px; bottom: -16px;" />
             <ui:Instance template="PanelAd" name="PanelAd" style="width: 530px; height: 350px; bottom: 16px; right: 0; position: absolute;" />
         </ui:VisualElement>
-        <ui:Instance template="FloatingButton" name="FloatingButton" style="position: absolute; top: 472px; left: 370px;" />
     </ui:VisualElement>
 </ui:UXML>

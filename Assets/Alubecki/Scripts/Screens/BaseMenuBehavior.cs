@@ -14,9 +14,10 @@ public abstract class BaseMenuBehavior : MonoBehaviour {
 
     UIDocument document;
     VisualElement body;
-    List<Button> buttons = new List<Button>();
 
-    Coroutine coroutineVisibility;
+    List<CustomButton> buttons = new List<CustomButton>();
+
+    //Coroutine coroutineVisibility;
 
 
     protected abstract void InitUI(UIDocument doc);
@@ -41,8 +42,27 @@ public abstract class BaseMenuBehavior : MonoBehaviour {
         DisableAllButtons();
     }
 
-    protected Button InitButton(string buttonName, UnityEvent buttonEvent, Action additionalAction = null) {
+    protected T RegisterButton<T>(T button, string buttonText, UnityEvent buttonEvent, Action additionalAction = null) where T : CustomButton{
 
+        buttons.Add(button);
+
+        if (!string.IsNullOrEmpty(buttonText)) {
+            button.SetText(buttonText);
+        }
+
+        button.AddOnClickListener(() => {
+
+            DisableAllButtons();
+
+            additionalAction?.Invoke();
+            buttonEvent?.Invoke();
+        });
+
+        return button;
+    }
+
+    protected Button InitButton(string buttonName, UnityEvent buttonEvent, Action additionalAction = null) {
+/*
         Button button = document.rootVisualElement.Q<Button>(buttonName);
         if (button == null) {
             throw new ArgumentException("The button " + buttonName + " was not declard in the UIDocument");
@@ -58,16 +78,17 @@ public abstract class BaseMenuBehavior : MonoBehaviour {
             buttonEvent?.Invoke();
         };
 
-        return button;
+        return button;*/
+        return null;
     }
 
     public void Show(bool animated) {
-
+/*
         if (coroutineVisibility != null) {
             StopCoroutine(coroutineVisibility);
             coroutineVisibility = null;
         }
-
+*/
         gameObject.SetActive(true);
 /*        if (animated && body != null) {
             coroutineVisibility = StartCoroutine(ShowAnimated());

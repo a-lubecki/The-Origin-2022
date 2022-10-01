@@ -11,16 +11,13 @@ public class MenuMainBehavior : BaseMenuBehavior {
     public UnityEvent eventOnSettings;
     public UnityEvent eventOnQuitGame;
 
-
     protected override void InitUI(UIDocument doc) {
 
-        InitButton("ButtonContinue", eventOnContinue);
-        InitButton("ButtonNewGame", eventOnNewGame);
-        InitButton("ButtonSettings", eventOnSettings);
-        //InitButton("ButtonQuitGame", eventOnQuitGame);
-
-        var button = doc.rootVisualElement.Q<VisualElement>("ButtonQuitGame");
-        Debug.Log("BUTTON : " + button);
+        RegisterButton(new FloatingButton(doc, "ButtonContinue"), "CONTINUE", eventOnContinue);
+        RegisterButton(new FloatingButton(doc, "ButtonNewGame"), "NEW GAME", eventOnNewGame);
+        RegisterButton(new FloatingButton(doc, "ButtonSettings"), "SETTINGS", eventOnSettings).SetHoriontalDirection(false);
+        RegisterButton(new FloatingButton(doc, "ButtonCredits"), "CREDITS", eventOnNewGame).SetHoriontalDirection(false);
+        RegisterButton(new CustomButton(doc, "ButtonQuitGame"), null, eventOnQuitGame);
     }
 
 }
