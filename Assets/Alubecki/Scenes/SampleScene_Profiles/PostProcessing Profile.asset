@@ -46,7 +46,7 @@ MonoBehaviour:
     overrideState: 1
     value: 1
   eyeAdaptation:
-    overrideState: 0
+    overrideState: 1
     value: 0
   speedUp:
     overrideState: 1

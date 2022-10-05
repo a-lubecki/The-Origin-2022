@@ -1,8 +1,20 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:Button text="Back" display-tooltip-when-elided="true" name="ButtonBack" />
-    <ui:Label text="New game" display-tooltip-when-elided="true" style="height: 15px;" />
-    <ui:Label text="Difficulty:" display-tooltip-when-elided="true" />
-    <ui:Button text="Easy" display-tooltip-when-elided="true" name="ButtonEasy" />
-    <ui:Button text="Medium" display-tooltip-when-elided="true" name="ButtonMedium" style="height: 19px;" />
-    <ui:Button text="Hard" display-tooltip-when-elided="true" name="ButtonHard" />
+    <ui:Template name="BackButton" src="project://database/Assets/Alubecki/UI/Components/BackButton.uxml?fileID=9197481963319205126&amp;guid=2351d88c7e0a74b96942e133fe87d604&amp;type=3#BackButton" />
+    <ui:Template name="FloatingButton" src="project://database/Assets/Alubecki/UI/Components/FloatingButton.uxml?fileID=9197481963319205126&amp;guid=191751ac5ee8c4c5ab7c41d5759b7779&amp;type=3#FloatingButton" />
+    <Style src="project://database/Assets/Alubecki/UI/Styles/Panels.uss?fileID=7433441132597879392&amp;guid=c434cffa2c2da422bb2488f4aa252677&amp;type=3#Panels" />
+    <Style src="project://database/Assets/Alubecki/UI/Styles/Main.uss?fileID=7433441132597879392&amp;guid=70f9c789155f84dfda888c3fff44905b&amp;type=3#Main" />
+    <ui:VisualElement name="Body" style="position: absolute; left: 0; right: 0; bottom: 0; top: 0;">
+        <ui:VisualElement name="Top" style="width: 1808px; translate: -50% 0; left: 50%; position: absolute; top: 30px; flex-direction: row;">
+            <ui:Instance template="BackButton" name="ButtonBack" style="top: 16px;" />
+        </ui:VisualElement>
+        <ui:Instance template="FloatingButton" name="ButtonEasy" style="position: absolute; top: 272px; left: 272px;" />
+        <ui:Instance template="FloatingButton" name="ButtonMedium" style="position: absolute; top: 468px; left: 148px;" />
+        <ui:Instance template="FloatingButton" name="ButtonHard" style="position: absolute; top: 680px; left: 292px;" />
+        <ui:VisualElement name="TargetButtonEasy" class="target-hidden" style="top: 50%; left: 50%; translate: -260px -100px;" />
+        <ui:VisualElement name="TargetButtonMedium" class="target-hidden" style="top: 50%; left: 50%; translate: -274px -10px;" />
+        <ui:VisualElement name="TargetButtonHard" class="target-hidden" style="top: 50%; left: 50%; translate: -230px 130px;" />
+        <ui:VisualElement class="panel-round" style="width: 500px; height: 500px; left: 50%; top: 50%; position: absolute; translate: -50% -50%;" />
+        <ui:Label text="Difficulty:" display-tooltip-when-elided="true" name="LabelDifficultyTitle" />
+        <ui:Label text="Difficulty:" display-tooltip-when-elided="true" name="LabelDifficultyDescription" />
+    </ui:VisualElement>
 </ui:UXML>

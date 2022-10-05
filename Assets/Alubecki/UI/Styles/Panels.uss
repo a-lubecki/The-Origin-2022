@@ -9,3 +9,11 @@
     border-top-width: 4px;
     border-bottom-width: 4px;
 }
+
+.panel-round {
+    background-color: rgba(134, 164, 172, 0.8);
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+}

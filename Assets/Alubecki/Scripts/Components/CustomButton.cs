@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 public class CustomButton {
 
 
-    protected TemplateContainer instance { get; }
+    protected TemplateContainer Instance { get; }
     Button button;
 
 
@@ -14,8 +14,10 @@ public class CustomButton {
     }
 
     public CustomButton(TemplateContainer instance) {
-        this.instance = instance;
+
+        Instance = instance;
         button = instance.Q<Button>();
+
         Init(instance);
     }
 

@@ -10,7 +10,7 @@ public class MenuSettingsBehavior : BaseMenuBehavior {
 
     protected override void InitUI(UIDocument doc) {
 
-        InitButton("ButtonBack", eventOnBack);
+        RegisterButton(new CustomButton(doc, "ButtonBack"), null, eventOnBack);
     }
 
 }

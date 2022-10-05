@@ -5,7 +5,7 @@
     <ui:VisualElement name="Container" class="panel-default" style="flex-direction: column; align-items: stretch; flex-grow: 1;">
         <ui:Label text="A NEW STORY BEGINS" display-tooltip-when-elided="true" class="h1" style="-unity-text-align: middle-center; height: 70px; color: rgb(102, 102, 102); background-color: rgb(255, 255, 255); left: 0; top: 0; right: 0;" />
         <ui:Label text="Check out the new DLC\n- Close to Utopia -" display-tooltip-when-elided="true" style="margin-top: 24px; -unity-text-align: upper-center; margin-left: 24px; margin-right: 24px; margin-bottom: 24px;" />
-        <ui:Instance template="ConfirmButton" name="ConfirmButton" style="margin-top: 0; margin-left: 0; margin-right: 24px; margin-bottom: 0; align-items: flex-end;" />
+        <ui:Instance template="ConfirmButton" name="ButtonBuyDLC" style="margin-top: 0; margin-left: 0; margin-right: 24px; margin-bottom: 0; align-items: flex-end;" />
         <ui:VisualElement style="position: absolute; left: 0; bottom: 0; background-image: url(&apos;project://database/Assets/Alubecki/Images/icon-dlc.png?fileID=21300000&amp;guid=c879d6119e12a42f7984d2bb8443da10&amp;type=3#icon-dlc&apos;); width: 180px; height: 172px; -unity-background-scale-mode: stretch-to-fill;" />
     </ui:VisualElement>
 </ui:UXML>

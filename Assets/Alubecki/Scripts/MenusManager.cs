@@ -17,13 +17,19 @@ public class MenusManager : MonoBehaviour {
 
     void Start() {
 
-        HideAllMenus(false);
+        postProcessingManager.SetBlackScreen(false);
 
-        decorations.Show(true);
+        HideAllMenus(false);
+        decorations.Hide(false);
+
+        StartCoroutine(ShowMenuAfterDelay(decorations));
         ShowMenuMain();
+
+        StartCoroutine(DoActionAfterDelay(0.1f, () => postProcessingManager.SetDefaultScreen(true)));
     }
 
     public void OnSelectMainMenu() {
+
         ShowMenuMain();
     }
 
@@ -48,6 +54,11 @@ public class MenusManager : MonoBehaviour {
 
     public void OnSelectQuitGame() {
         QuitGame();
+    }
+
+    public void OnSelectBuyDLC() {
+        //open custom URL of a real game
+        Application.OpenURL("https://store.steampowered.com/");
     }
 
     void HideAllMenus(bool animated) {
@@ -88,20 +99,22 @@ public class MenusManager : MonoBehaviour {
 
     void StartGame() {
 
+        decorations.Hide(true);
         HideAllMenus(true);
 
         cameraManager.SelectVCamStartGame();
-        postProcessingManager.SetWhiteScreen();
+        postProcessingManager.SetWhiteScreen(true);
 
         StartCoroutine(DoActionAfterDelay(2f, () => SceneManager.LoadScene(0)));
     }
 
     void QuitGame() {
 
+        decorations.Hide(true);
         HideAllMenus(true);
 
         cameraManager.SelectVCamQuitGame();
-        postProcessingManager.SetBlackScreen();
+        postProcessingManager.SetBlackScreen(true);
 
         StartCoroutine(DoActionAfterDelay(2f, () => {
 #if UNITY_EDITOR
