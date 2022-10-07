@@ -46,12 +46,12 @@ Button {
 }
 
 .button-default > * {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgb(255, 255, 255);
     color: rgb(102, 102, 102);
 }
 
 .button-default:hover > * {
-    background-color: rgba(255, 238, 170, 0.9);
+    background-color: rgb(255, 238, 170);
 }
 
 .button-default:hover > .square-back {
@@ -62,7 +62,7 @@ Button {
 }
 
 .button-confirm > Button {
-    background-color: rgba(60, 150, 0, 0.9);
+    background-color: rgb(60, 150, 0);
     color: rgb(255, 255, 255);
     border-left-color: rgb(255, 255, 255);
     border-right-color: rgb(255, 255, 255);
@@ -75,7 +75,7 @@ Button {
 }
 
 .button-confirm:hover > Button {
-    background-color: rgba(198, 231, 177, 0.9);
+    background-color: rgb(198, 231, 177);
     color: rgb(102, 102, 102);
 }
 
@@ -92,7 +92,7 @@ Button {
 }
 
 .button-destructive:hover > Button {
-    background-color: rgba(245, 211, 211, 0.9);
+    background-color: rgb(245, 211, 211);
     color: rgb(102, 102, 102);
 }
 

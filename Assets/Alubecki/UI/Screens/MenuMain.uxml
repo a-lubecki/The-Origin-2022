@@ -1,10 +1,11 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:Template name="FloatingButton" src="project://database/Assets/Alubecki/UI/Components/FloatingButton.uxml?fileID=9197481963319205126&amp;guid=191751ac5ee8c4c5ab7c41d5759b7779&amp;type=3#FloatingButton" />
     <ui:Template name="QuitButton" src="project://database/Assets/Alubecki/UI/Components/QuitButton.uxml?fileID=9197481963319205126&amp;guid=d0ac5a4fe00cf49e798c2a7adbfb5ee0&amp;type=3#QuitButton" />
     <ui:Template name="PanelAd" src="project://database/Assets/Alubecki/UI/Panels/PanelAd.uxml?fileID=9197481963319205126&amp;guid=e468753aefbc047808d33829eaccffa0&amp;type=3#PanelAd" />
+    <ui:Template name="FloatingButton" src="project://database/Assets/Alubecki/UI/Components/FloatingButton.uxml?fileID=9197481963319205126&amp;guid=191751ac5ee8c4c5ab7c41d5759b7779&amp;type=3#FloatingButton" />
     <Style src="project://database/Assets/Alubecki/UI/Styles/Main.uss?fileID=7433441132597879392&amp;guid=70f9c789155f84dfda888c3fff44905b&amp;type=3#Main" />
     <Style src="project://database/Assets/Alubecki/UI/Styles/Components.uss?fileID=7433441132597879392&amp;guid=574804cbc05ee4ca0b33a57b0783b0d1&amp;type=3#Components" />
-    <ui:VisualElement name="Body" style="left: 0; top: 0; right: 0; bottom: 0; position: absolute;">
+    <Style src="project://database/Assets/Alubecki/UI/Styles/Panels.uss?fileID=7433441132597879392&amp;guid=c434cffa2c2da422bb2488f4aa252677&amp;type=3#Panels" />
+    <ui:VisualElement name="Body" class="body">
         <ui:VisualElement name="Top" style="width: 1808px; translate: -50% 0; left: 50%; position: absolute; top: 30px; flex-direction: row;">
             <ui:Instance template="QuitButton" name="ButtonQuitGame" style="top: 16px;" />
         </ui:VisualElement>

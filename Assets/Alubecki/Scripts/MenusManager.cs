@@ -38,7 +38,7 @@ public class MenusManager : MonoBehaviour {
     }
 
     public void OnSelectNewGame() {
-        ShowNewGameMenu();
+        ShowMenuNewGame();
     }
 
     public void OnSelectNewGameDifficulty() {
@@ -79,7 +79,7 @@ public class MenusManager : MonoBehaviour {
         StartCoroutine(ShowMenuAfterDelay(menuMain));
     }
 
-    void ShowNewGameMenu() {
+    void ShowMenuNewGame() {
 
         HideAllMenus(true);
 

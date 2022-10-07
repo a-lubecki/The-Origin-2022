@@ -68,7 +68,7 @@ public class FloatingButton : CustomButton {
 
     Vector2 GetLineOrigin() {
 
-        var b = Instance.worldBound;
+        var b = Instance.localBound;
         var y = b.yMax - HALF_LINE_THICKNESS;
 
         return IsLeftOriented ? new Vector2(b.xMin, y) : new Vector2(b.xMax, y);
@@ -76,7 +76,7 @@ public class FloatingButton : CustomButton {
 
     static Vector2 GetAbsolutePos(VisualElement element) {
 
-        var b = element.worldBound;
+        var b = element.localBound;
         return new Vector2(
             b.x + 0.5f * b.width,
             b.y + 0.5f * b.height

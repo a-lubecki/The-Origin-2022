@@ -2,16 +2,19 @@
     <Style src="project://database/Assets/Alubecki/UI/Styles/Decorations.uss?fileID=7433441132597879392&amp;guid=684587bae7a2148fcb51cf59af52c98d&amp;type=3#Decorations" />
     <Style src="project://database/Assets/Alubecki/UI/Styles/Main.uss?fileID=7433441132597879392&amp;guid=70f9c789155f84dfda888c3fff44905b&amp;type=3#Main" />
     <Style src="project://database/Assets/Alubecki/UI/Styles/Components.uss?fileID=7433441132597879392&amp;guid=574804cbc05ee4ca0b33a57b0783b0d1&amp;type=3#Components" />
-    <ui:VisualElement name="Circle0" class="circle" style="background-image: url(&apos;project://database/Assets/Alubecki/Images/circle0.png?fileID=21300000&amp;guid=61e33b1cc9f6d4a5c99927522bb6404f&amp;type=3#circle0&apos;); width: 336px; height: 336px;" />
-    <ui:VisualElement name="Circle1" class="circle" style="background-image: url(&apos;project://database/Assets/Alubecki/Images/circle1.png?fileID=21300000&amp;guid=66967716cfb014a36a2cacf93cb8d31d&amp;type=3#circle1&apos;); width: 384px; height: 384px;" />
-    <ui:VisualElement name="Circle2" class="circle" style="background-image: url(&apos;project://database/Assets/Alubecki/Images/circle2.png?fileID=21300000&amp;guid=d630fb63578eb41f7a5014b1bb345a9d&amp;type=3#circle2&apos;); width: 440px; height: 440px;" />
-    <ui:VisualElement name="Circle3" class="circle" style="background-image: url(&apos;project://database/Assets/Alubecki/Images/circle3.png?fileID=21300000&amp;guid=c151a0dfdf8f949a293142c70e936b10&amp;type=3#circle3&apos;); width: 524px; height: 524px;" />
-    <ui:VisualElement name="Lines" tabindex="-1" class="panel" style="left: 0; top: 0; right: 0; bottom: 0; position: absolute; align-items: center;">
-        <ui:VisualElement name="LineTop" style="background-image: url(&apos;project://database/Assets/Alubecki/Images/screen-line-top.png?fileID=21300000&amp;guid=5024d256460304fe198f0c8ba2e5c3b0&amp;type=3#screen-line-top&apos;); position: absolute; top: 20px; width: 1808px; height: 88px; -unity-background-scale-mode: scale-to-fit; align-items: center;">
-            <ui:VisualElement name="TopBackground" style="background-image: url(&apos;project://database/Assets/Alubecki/Images/screen-bg-title.png?fileID=21300000&amp;guid=dd05dbe06cea1432bada0d3e238362a3&amp;type=3#screen-bg-title&apos;); width: 900px; height: 80px; align-items: center; justify-content: center;">
-                <ui:Label text="Title" display-tooltip-when-elided="true" name="ScreenTitle" class="h1" />
+    <Style src="project://database/Assets/Alubecki/UI/Styles/Panels.uss?fileID=7433441132597879392&amp;guid=c434cffa2c2da422bb2488f4aa252677&amp;type=3#Panels" />
+    <ui:VisualElement name="Body" class="body" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+        <ui:VisualElement name="Circle0" class="circle" style="background-image: url(&apos;project://database/Assets/Alubecki/Images/circle0.png?fileID=21300000&amp;guid=61e33b1cc9f6d4a5c99927522bb6404f&amp;type=3#circle0&apos;); width: 336px; height: 336px;" />
+        <ui:VisualElement name="Circle1" class="circle" style="background-image: url(&apos;project://database/Assets/Alubecki/Images/circle1.png?fileID=21300000&amp;guid=66967716cfb014a36a2cacf93cb8d31d&amp;type=3#circle1&apos;); width: 384px; height: 384px;" />
+        <ui:VisualElement name="Circle2" class="circle" style="background-image: url(&apos;project://database/Assets/Alubecki/Images/circle2.png?fileID=21300000&amp;guid=d630fb63578eb41f7a5014b1bb345a9d&amp;type=3#circle2&apos;); width: 440px; height: 440px;" />
+        <ui:VisualElement name="Circle3" class="circle" style="background-image: url(&apos;project://database/Assets/Alubecki/Images/circle3.png?fileID=21300000&amp;guid=c151a0dfdf8f949a293142c70e936b10&amp;type=3#circle3&apos;); width: 524px; height: 524px;" />
+        <ui:VisualElement name="Lines" tabindex="-1" class="panel" style="left: 0; top: 0; right: 0; bottom: 0; position: absolute; align-items: center;">
+            <ui:VisualElement name="LineTop" style="background-image: url(&apos;project://database/Assets/Alubecki/Images/screen-line-top.png?fileID=21300000&amp;guid=5024d256460304fe198f0c8ba2e5c3b0&amp;type=3#screen-line-top&apos;); position: absolute; top: 20px; width: 1808px; height: 88px; -unity-background-scale-mode: scale-to-fit; align-items: center;">
+                <ui:VisualElement name="TopBackground" style="background-image: url(&apos;project://database/Assets/Alubecki/Images/screen-bg-title.png?fileID=21300000&amp;guid=dd05dbe06cea1432bada0d3e238362a3&amp;type=3#screen-bg-title&apos;); width: 900px; height: 80px; align-items: center; justify-content: center;">
+                    <ui:Label text="Title" display-tooltip-when-elided="true" name="ScreenTitle" class="h1" />
+                </ui:VisualElement>
             </ui:VisualElement>
+            <ui:VisualElement name="LineBottom" style="background-image: url(&apos;project://database/Assets/Alubecki/Images/screen-line-bottom.png?fileID=21300000&amp;guid=5c69924fcc50449f399db67cd185c34e&amp;type=3#screen-line-bottom&apos;); width: 1780px; height: 40px; position: absolute; bottom: 30px; align-items: center; -unity-background-scale-mode: scale-to-fit;" />
         </ui:VisualElement>
-        <ui:VisualElement name="LineBottom" style="background-image: url(&apos;project://database/Assets/Alubecki/Images/screen-line-bottom.png?fileID=21300000&amp;guid=5c69924fcc50449f399db67cd185c34e&amp;type=3#screen-line-bottom&apos;); width: 1780px; height: 40px; position: absolute; bottom: 30px; align-items: center; -unity-background-scale-mode: scale-to-fit;" />
     </ui:VisualElement>
 </ui:UXML>

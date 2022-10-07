@@ -12,6 +12,8 @@ public class Line : VisualElement {
 
     public Line(Vector2 origin, Vector2 destination, float thickness) {
 
+        style.position = Position.Absolute;
+
         SetOrigin(origin);
         SetDestination(destination);
         SetThickness(thickness);
