@@ -115,3 +115,46 @@ Button {
     margin-right: 8px;
     background-color: rgb(255, 255, 255);
 }
+
+RadioButton {
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: rgba(102, 102, 102, 0.9);
+    height: 80px;
+    padding-left: 40px;
+}
+
+RadioButton:selected {
+    background-color: rgb(255, 255, 255);
+}
+
+RadioButton:hover {
+    background-color: rgb(255, 238, 170);
+}
+
+RadioButton Label {
+    -unity-font-definition: url('project://database/Assets/Alubecki/Fonts/Electrolize/Electrolize-Regular%20SDF.asset?fileID=11400000&guid=b0a424798be0040be866dbda737a1e2f&type=2#Electrolize-Regular SDF');
+    font-size: 36px;
+}
+
+RadioButton:hover Label {
+    color: rgb(102, 102, 102);
+}
+
+RadioButton:selected Label {
+    color: rgb(102, 102, 102);
+}
+
+.unity-radio-button__checkmark-background {
+    display: none;
+}
