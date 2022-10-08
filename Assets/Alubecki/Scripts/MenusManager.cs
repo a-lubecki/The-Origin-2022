@@ -13,6 +13,16 @@ public class MenusManager : MonoBehaviour {
     [SerializeField] MenuMainBehavior menuMain;
     [SerializeField] MenuNewGameBehavior menuNewGame;
     [SerializeField] MenuSettingsBehavior menuSettings;
+    [SerializeField] MenuCreditsBehavior menuCredits;
+
+    BaseMenuBehavior[] menus {
+        get { return new BaseMenuBehavior[] {
+                menuMain,
+                menuNewGame,
+                menuSettings,
+                menuCredits
+            }; }
+    }
 
 
     void Start() {
@@ -29,7 +39,6 @@ public class MenusManager : MonoBehaviour {
     }
 
     public void OnSelectMainMenu() {
-
         ShowMenuMain();
     }
 
@@ -52,6 +61,10 @@ public class MenusManager : MonoBehaviour {
         ShowMenuSettings();
     }
 
+    public void OnSelectCredits() {
+        ShowMenuCredits();
+    }
+
     public void OnSelectQuitGame() {
         QuitGame();
     }
@@ -65,9 +78,9 @@ public class MenusManager : MonoBehaviour {
 
         decorations.UpdateScreenTitle(null);
 
-        menuMain.Hide(animated);
-        menuNewGame.Hide(animated);
-        menuSettings.Hide(animated);
+        foreach (var m in menus) {
+            m.Hide(animated);
+        }
     }
 
     void ShowMenuMain() {
@@ -95,6 +108,15 @@ public class MenusManager : MonoBehaviour {
         cameraManager.SelectVCamSettings();
 
         StartCoroutine(ShowMenuAfterDelay(menuSettings));
+    }
+
+    void ShowMenuCredits() {
+
+        HideAllMenus(true);
+
+        cameraManager.SelectVCamCredits();
+
+        StartCoroutine(ShowMenuAfterDelay(menuCredits));
     }
 
     void StartGame() {

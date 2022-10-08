@@ -1,16 +1,11 @@
-.hidden-animated {
+.opacity-0-animated {
     opacity: 0;
-    transition-duration: 3s;
-    transition-delay: 1s;
+    transition-duration: 0.3s;
 }
 
-.visible-animated {
+.opacity-1-animated {
     opacity: 1;
-    transition-duration: 3s;
-}
-
-.hidden {
-    opacity: 0;
+    transition-duration: 0.3s;
 }
 
 .target-hidden {

@@ -17,7 +17,8 @@ public abstract class BaseMenuBehavior : MonoBehaviour {
 
     List<CustomButton> buttons = new List<CustomButton>();
 
-    //Coroutine coroutineVisibility;
+    bool isAnimatingShow;
+    bool isAnimatingHide;
 
 
     protected abstract void InitUI(UIDocument doc);
@@ -26,6 +27,15 @@ public abstract class BaseMenuBehavior : MonoBehaviour {
 
         Document = GetComponent<UIDocument>();
         Body = Document.rootVisualElement.Q<VisualElement>("Body");
+
+        Body.RegisterCallback<TransitionEndEvent>(_ => {
+
+            if (isAnimatingShow) {
+                ApplyShow();
+            } else if (isAnimatingHide) {
+                ApplyHide();
+            }
+        });
     }
 
     protected virtual void OnEnable() {
@@ -65,73 +75,63 @@ public abstract class BaseMenuBehavior : MonoBehaviour {
 
         Document.rootVisualElement.style.display = DisplayStyle.Flex;
         EnableUI();
+
+        if (animated) {
+            isAnimatingShow = true;
+            Body.AddToClassList("opacity-1-animated");
+        } else {
+            ApplyShow();
+        }
+    }
+
+    void ApplyShow() {
+
+        StopOpacityAnimation();
+        Document.rootVisualElement.style.display = DisplayStyle.Flex;
+
+        OnMenuShow();
+    }
+
+    protected virtual void OnMenuShow() {
+        //override if necessary
     }
 
     public void Hide(bool animated) {
 
+        DisableUI();
+
+        if (animated) {
+            isAnimatingHide = true;
+            Body.AddToClassList("opacity-0-animated");
+        } else {
+            ApplyHide();
+        }
+    }
+
+    void ApplyHide() {
+
+        StopOpacityAnimation();
         Document.rootVisualElement.style.display = DisplayStyle.None;
+
+        OnMenuHide();
     }
 
-/*
-    public void Show(bool animated) {
-
-        if (coroutineVisibility != null) {
-            StopCoroutine(coroutineVisibility);
-            coroutineVisibility = null;
-        }
-
-        gameObject.SetActive(true);
-        if (animated && body != null) {
-            coroutineVisibility = StartCoroutine(ShowAnimated());
-        } else {
-            document.enabled = true;
-        }
+    protected virtual void OnMenuHide() {
+        //override if necessary
     }
 
-    IEnumerator ShowAnimated() {
+    void StopOpacityAnimation() {
 
-        document.enabled = true;
+        isAnimatingShow = false;
+        isAnimatingHide = false;
 
-Debug.LogError("TODO");yield return null;
-        body.AddToClassList("hidden");
-
-        yield return new WaitForEndOfFrame();
-
-        //body.AddToClassList("visible-animated");
-        //body.RemoveFromClassList("hidden");
-
-        //yield return new WaitWhile(() => body.style.opacity.value < 1);
-
-        //body.RemoveFromClassList("visible-animated");
+        Body.RemoveFromClassList("opacity-0-animated");
+        Body.RemoveFromClassList("opacity-1-animated");
     }
-
-    public void Hide(bool animated) {
-
-        gameObject.SetActive(false);
-
-        if (animated && body != null) {
-            coroutineVisibility = StartCoroutine(HideAnimated());
-        } else {
-            document.enabled = false;
-        }
-    }
-
-    IEnumerator HideAnimated() {
-
-Debug.LogError("TODO");yield return null;
-
-        body.AddToClassList("hidden-animated");
-
-        yield return new WaitWhile(() => body.style.opacity.value > 0);
-
-        body.RemoveFromClassList("hidden-animated");
-
-        document.enabled = false;
-    }*/
 
     protected void EnableUI() {
 
-        Body?.SetEnabled(true);
+        Body.SetEnabled(true);
 
         foreach (var button in buttons) {
             button.SetEnabled(true);
@@ -140,7 +140,7 @@ Debug.LogError("TODO");yield return null;
 
     protected void DisableUI() {
 
-        Body?.SetEnabled(false);
+        Body.SetEnabled(false);
 
         foreach (var button in buttons) {
             button.SetEnabled(false);

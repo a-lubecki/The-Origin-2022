@@ -6,10 +6,11 @@ using UnityEngine.UIElements;
 public class MenuMainBehavior : BaseMenuBehavior {
 
 
+    public UnityEvent eventOnQuitGame;
     public UnityEvent eventOnNewGame;
     public UnityEvent eventOnContinue;
     public UnityEvent eventOnSettings;
-    public UnityEvent eventOnQuitGame;
+    public UnityEvent eventOnCredits;
     public UnityEvent eventOnBuyDLC;
 
 
@@ -27,7 +28,7 @@ public class MenuMainBehavior : BaseMenuBehavior {
         buttonSettings.SetHorizontalDirection(true);
         buttonSettings.SetLineDestination(Body, doc.rootVisualElement.Q<VisualElement>("TargetButtonSettings"));
 
-        var buttonCredits = RegisterButton(new FloatingButton(doc, "ButtonCredits"), "CREDITS", eventOnNewGame);
+        var buttonCredits = RegisterButton(new FloatingButton(doc, "ButtonCredits"), "CREDITS", eventOnCredits);
         buttonCredits.SetHorizontalDirection(true);
         buttonCredits.SetLineDestination(Body, doc.rootVisualElement.Q<VisualElement>("TargetButtonCredits"));
 
