@@ -50,7 +50,7 @@ public class MenusManager : MonoBehaviour {
 
     public void OnSelectNewGameDifficulty() {
 
-        Debug.Log("Selected game difficulty " + menuNewGame.difficulty);
+        Debug.Log("Selected game difficulty " + menuNewGame.SelectedDifficulty);
 
         StartGame();
     }

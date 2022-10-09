@@ -2,7 +2,7 @@
     <Style src="project://database/Assets/Alubecki/UI/Styles/Components.uss?fileID=7433441132597879392&amp;guid=574804cbc05ee4ca0b33a57b0783b0d1&amp;type=3#Components" />
     <ui:VisualElement name="Container" class="button-default" style="align-items: flex-end; flex-direction: row;">
         <ui:Button text="BUTTON" display-tooltip-when-elided="true" />
-        <ui:VisualElement class="square" />
+        <ui:VisualElement name="Square" class="square" />
     </ui:VisualElement>
     <ui:VisualElement class="line" style="margin-top: 8px;" />
 </ui:UXML>

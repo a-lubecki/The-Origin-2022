@@ -37,4 +37,10 @@ public class CustomButton {
         button.clicked += onClick;
     }
 
+    public virtual void AddOnHoverListener(Action onPointerEnter, Action onPointerExit) {
+
+        button.RegisterCallback<PointerOverEvent>(_ => onPointerEnter());
+        button.RegisterCallback<PointerOutEvent>(_ => onPointerExit());
+    }
+
 }

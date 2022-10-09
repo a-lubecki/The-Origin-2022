@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -10,6 +11,7 @@ public class FloatingButton : CustomButton {
 
 
     VisualElement container;
+    VisualElement square;
     VisualElement destinationElement;
     Line line;
 
@@ -28,7 +30,16 @@ public class FloatingButton : CustomButton {
         container = instance.ElementAt(0);
         SetHorizontalDirection(false);
 
+        square = instance.Q<VisualElement>("");
+
         instance.generateVisualContent = OnGenerateVisualContent;
+    }
+
+    public override void AddOnHoverListener(Action onPointerEnter, Action onPointerExit) {
+        base.AddOnHoverListener(onPointerEnter, onPointerExit);
+
+        square.RegisterCallback<PointerOverEvent>(_ => onPointerEnter());
+        square.RegisterCallback<PointerOutEvent>(_ => onPointerExit());
     }
 
     void OnGenerateVisualContent(MeshGenerationContext mgc) {

@@ -1565,7 +1565,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.2716249, y: 1}
+    m_SensorSize: {x: 2.095713, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -3522,7 +3522,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.2716249, y: 1}
+    m_SensorSize: {x: 2.095713, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -4153,7 +4153,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.2716249, y: 1}
+    m_SensorSize: {x: 2.095713, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -4393,8 +4393,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.2232887, y: 0.000000029049886, z: -0.0000000066545223, w: 0.97475237}
-  m_LocalPosition: {x: 0, y: 2.88, z: -1.82}
+  m_LocalRotation: {x: -0.09254138, y: 0.000000004283138, z: 3.980756e-10, w: 0.9957089}
+  m_LocalPosition: {x: 0, y: 0.5, z: -8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7191,7 +7191,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.2716249, y: 1}
+    m_SensorSize: {x: 2.095713, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -7335,7 +7335,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1400485575}
-  m_LocalRotation: {x: 0.2232887, y: 0.000000029049886, z: -0.0000000066545223, w: 0.97475237}
+  m_LocalRotation: {x: 0.22328869, y: -1.6866592e-15, z: -9.489762e-17, w: 0.97475237}
   m_LocalPosition: {x: 0, y: 2.88, z: -1.82}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -7373,7 +7373,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.2716249, y: 1}
+    m_SensorSize: {x: 2.095713, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -10373,7 +10373,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.2716249, y: 1}
+    m_SensorSize: {x: 2.095713, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -10689,7 +10689,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  difficulty: 0
+  difficultyDescriptions:
+  - You don't play video games often
+  - You're used to play this kind of game
+  - You want a real challenge
 --- !u!1001 &2097208037
 PrefabInstance:
   m_ObjectHideFlags: 0
