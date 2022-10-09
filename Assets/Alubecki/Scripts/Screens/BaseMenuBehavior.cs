@@ -21,6 +21,21 @@ public abstract class BaseMenuBehavior : MonoBehaviour {
     bool isAnimatingHide;
 
 
+    public virtual Vector3[] CirclesPositions => new Vector3[] {
+        Vector3.zero,
+        Vector3.zero,
+        Vector3.zero,
+        Vector3.zero
+    };
+
+    public virtual Vector3[] CirclesScales => new Vector3[] {
+        Vector3.one,
+        Vector3.one,
+        Vector3.one,
+        Vector3.one
+    };
+
+
     protected abstract void InitUI(UIDocument doc);
 
     protected virtual void Awake() {
@@ -90,7 +105,6 @@ public abstract class BaseMenuBehavior : MonoBehaviour {
     public void Show(bool animated) {
 
         Document.rootVisualElement.style.display = DisplayStyle.Flex;
-        EnableUI();
 
         OnMenuPreShow();
 
@@ -106,6 +120,8 @@ public abstract class BaseMenuBehavior : MonoBehaviour {
 
         StopOpacityAnimation();
         Document.rootVisualElement.style.display = DisplayStyle.Flex;
+
+        EnableUI();
 
         OnMenuShow();
     }
@@ -129,7 +145,13 @@ public abstract class BaseMenuBehavior : MonoBehaviour {
         OnMenuHide();
 
         StopOpacityAnimation();
-        Document.rootVisualElement.style.display = DisplayStyle.None;
+
+        // Avoid a crash not resolved by Unity when the visuale element is already repainting
+        try {
+            Document.rootVisualElement.style.display = DisplayStyle.None;
+        } catch {
+            //no need to flood logs with errors
+        }
     }
 
     void StopOpacityAnimation() {
@@ -144,19 +166,11 @@ public abstract class BaseMenuBehavior : MonoBehaviour {
     protected void EnableUI() {
 
         Body.SetEnabled(true);
-
-        foreach (var button in buttons) {
-            button.SetEnabled(true);
-        }
     }
 
     protected void DisableUI() {
 
         Body.SetEnabled(false);
-
-        foreach (var button in buttons) {
-            button.SetEnabled(false);
-        }
     }
 
 }

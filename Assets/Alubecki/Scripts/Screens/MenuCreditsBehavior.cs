@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UIElements;
@@ -14,6 +15,14 @@ public class MenuCreditsBehavior : BaseMenuBehavior {
     bool canAutoScroll;
 
 
+    public override Vector3[] CirclesPositions => new Vector3[] {
+        new Vector3(-800, -400, 0),
+        new Vector3(800, -400, 0),
+        new Vector3(800, 400, 0),
+        new Vector3(-800, 400, 0),
+    };
+
+
     protected override void InitUI(UIDocument doc) {
 
         RegisterButton(new CustomButton(doc, "ButtonBack"), null, eventOnBack);
@@ -27,11 +36,20 @@ public class MenuCreditsBehavior : BaseMenuBehavior {
     }
 
     protected override void OnMenuShow() {
-        canAutoScroll = true;
+
+        StartCoroutine(AutoScrollAfterDelay());
     }
 
     protected override void OnMenuPreHide() {
+
         canAutoScroll = false;
+    }
+
+    IEnumerator AutoScrollAfterDelay() {
+
+        yield return new WaitForSeconds(1);
+
+        canAutoScroll = true;
     }
 
     void Update() {

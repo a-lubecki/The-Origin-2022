@@ -11,9 +11,9 @@
         <ui:VisualElement name="Top" style="width: 1808px; translate: -50% 0; left: 50%; position: absolute; top: 30px; flex-direction: row;">
             <ui:Instance template="BackButton" name="ButtonBack" style="top: 16px;" />
         </ui:VisualElement>
-        <ui:VisualElement name="TargetButtonHard" class="target-hidden" style="top: 50%; left: 50%; translate: -230px 130px;" />
-        <ui:VisualElement name="TargetButtonMedium" class="target-hidden" style="top: 50%; left: 50%; translate: -274px -10px;" />
         <ui:VisualElement name="TargetButtonEasy" class="target-hidden" style="top: 50%; left: 50%; translate: -260px -100px;" />
+        <ui:VisualElement name="TargetButtonMedium" class="target-hidden" style="top: 50%; left: 50%; translate: -274px -10px;" />
+        <ui:VisualElement name="TargetButtonHard" class="target-hidden" style="top: 50%; left: 50%; translate: -250px 90px;" />
         <ui:VisualElement class="panel-round" style="width: 460px; height: 460px; left: 50%; top: 50%; position: absolute; translate: -50% -50%; align-items: center; justify-content: center; padding-left: 50px; padding-right: 50px; padding-top: 50px; padding-bottom: 50px;">
             <ui:Label text="CHOOSE YOUR DIFFICULTY" display-tooltip-when-elided="true" name="LabelDifficultyTitle" style="font-size: 50px; -unity-font-definition: url(&apos;project://database/Assets/Alubecki/Fonts/Rajdhani/Rajdhani-Medium%20SDF.asset?fileID=11400000&amp;guid=177277ea8f94449f4a47955d7d879fa1&amp;type=2#Rajdhani-Medium SDF&apos;); white-space: normal; -unity-text-align: upper-center;" />
             <ui:Label text="Description" display-tooltip-when-elided="true" name="LabelDifficultyDescription" style="margin-top: 16px; white-space: normal; -unity-text-align: upper-center;" />

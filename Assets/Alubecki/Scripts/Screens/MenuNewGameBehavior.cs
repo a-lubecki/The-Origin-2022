@@ -16,6 +16,13 @@ public class MenuNewGameBehavior : BaseMenuBehavior {
 
     public GameDifficulty SelectedDifficulty { get; private set; }
 
+    public override Vector3[] CirclesPositions => new Vector3[] {
+        new Vector3(700, 0, 0),
+        new Vector3(500, 0, 0),
+        new Vector3(300, 0, 0),
+        Vector3.zero,
+    };
+
 
     protected override void Awake() {
         base.Awake();

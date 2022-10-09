@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 
 public class MenusManager : MonoBehaviour {
@@ -28,12 +29,33 @@ public class MenusManager : MonoBehaviour {
         postProcessingManager.SetBlackScreen(false);
 
         HideAllMenus(false);
-        decorations.Hide(false);
 
-        StartCoroutine(ShowMenuAfterDelay(decorations));
+        decorations.Hide(false);
+        decorations.UpdateScreenTitle("");
+
+        StartCoroutine(AnimateFirstMenu());
+    }
+
+    IEnumerator AnimateFirstMenu() {
+
+        yield return new WaitForSeconds(0.1f);
+
+        decorations.Show(true);
+
+        yield return new WaitForEndOfFrame();
+
+        decorations.MoveCircles(decorations.CirclesPositions, new Vector3[] {
+            new Vector3(1.25f, 1.25f, 1.25f),
+            new Vector3(1.5f, 1.5f, 1.5f),
+            new Vector3(1.7f, 1.7f, 1.7f),
+            new Vector3(2, 2, 2),
+        }, 0.2f);
+
         ShowMenuMain();
 
-        StartCoroutine(DoActionAfterDelay(0.1f, () => postProcessingManager.SetDefaultScreen(true)));
+        yield return new WaitForSeconds(0.2f);
+
+        postProcessingManager.SetDefaultScreen(true);
     }
 
     public void OnSelectMainMenu() {
@@ -154,7 +176,13 @@ public class MenusManager : MonoBehaviour {
 
     IEnumerator ShowMenuAfterDelay(BaseMenuBehavior menu) {
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.3f);
+
+        if (menu != decorations) {
+            decorations.MoveCircles(menu.CirclesPositions, menu.CirclesScales, 0.3f);
+        }
+
+        yield return new WaitForSeconds(0.4f);
 
         menu.Show(true);
         decorations.UpdateScreenTitle(menu.ScreenTitle);

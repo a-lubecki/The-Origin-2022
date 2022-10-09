@@ -1,3 +1,4 @@
+using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UIElements;
 
@@ -9,6 +10,12 @@ public class MenuSettingsBehavior : BaseMenuBehavior {
 
     TabsSelector tabsSelector;
 
+    public override Vector3[] CirclesPositions => new Vector3[] {
+        new Vector3(-500, 200, 0),
+        new Vector3(-500, 300, 0),
+        new Vector3(-500, 250, 0),
+        new Vector3(-500, 150, 0),
+    };
 
     protected override void InitUI(UIDocument doc) {
 
