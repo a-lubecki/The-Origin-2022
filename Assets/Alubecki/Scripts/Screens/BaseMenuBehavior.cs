@@ -127,7 +127,7 @@ public abstract class BaseMenuBehavior : MonoBehaviour {
     void ApplyHide() {
 
         OnMenuHide();
-        
+
         StopOpacityAnimation();
         Document.rootVisualElement.style.display = DisplayStyle.None;
     }

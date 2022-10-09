@@ -18,6 +18,7 @@ public class MenuNewGameBehavior : BaseMenuBehavior {
 
 
     protected override void Awake() {
+        base.Awake();
 
         var difficultiesCount = Enum.GetNames(typeof(GameDifficulty)).Length;
         if (difficultyDescriptions.Length != difficultiesCount) {
@@ -39,6 +40,7 @@ public class MenuNewGameBehavior : BaseMenuBehavior {
         buttonHard.SetLineDestination(Body, doc.rootVisualElement.Q<VisualElement>("TargetButtonHard"));
 
         labelDifficultyDescription = doc.rootVisualElement.Q<Label>("LabelDifficultyDescription");
+        labelDifficultyDescription.style.display = DisplayStyle.None;
 
         RegisterButtonHoverCallbacks(buttonEasy, GameDifficulty.EASY);
         RegisterButtonHoverCallbacks(buttonMedium, GameDifficulty.MEDIUM);
@@ -48,8 +50,11 @@ public class MenuNewGameBehavior : BaseMenuBehavior {
     void RegisterButtonHoverCallbacks(CustomButton button, GameDifficulty difficulty) {
 
         button.AddOnHoverListener(
-            () => labelDifficultyDescription.text = difficultyDescriptions[(int)difficulty],
-            () => labelDifficultyDescription.text = ""
+            () => {
+                labelDifficultyDescription.style.display = DisplayStyle.Flex;
+                labelDifficultyDescription.text = difficultyDescriptions[(int)difficulty];
+            },
+            () => labelDifficultyDescription.style.display = DisplayStyle.None
         );
     }
 

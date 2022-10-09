@@ -30,7 +30,7 @@ public class FloatingButton : CustomButton {
         container = instance.ElementAt(0);
         SetHorizontalDirection(false);
 
-        square = instance.Q<VisualElement>("");
+        square = instance.Q<VisualElement>("Square");
 
         instance.generateVisualContent = OnGenerateVisualContent;
     }
@@ -38,8 +38,8 @@ public class FloatingButton : CustomButton {
     public override void AddOnHoverListener(Action onPointerEnter, Action onPointerExit) {
         base.AddOnHoverListener(onPointerEnter, onPointerExit);
 
-        square.RegisterCallback<PointerOverEvent>(_ => onPointerEnter());
-        square.RegisterCallback<PointerOutEvent>(_ => onPointerExit());
+        square?.RegisterCallback<PointerOverEvent>(_ => onPointerEnter());
+        square?.RegisterCallback<PointerOutEvent>(_ => onPointerExit());
     }
 
     void OnGenerateVisualContent(MeshGenerationContext mgc) {
