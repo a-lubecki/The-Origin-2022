@@ -30,7 +30,7 @@ public class MenuCreditsBehavior : BaseMenuBehavior {
         canAutoScroll = true;
     }
 
-    protected override void OnMenuHide() {
+    protected override void OnMenuPreHide() {
         canAutoScroll = false;
     }
 

@@ -15,14 +15,12 @@ public class MenusManager : MonoBehaviour {
     [SerializeField] MenuSettingsBehavior menuSettings;
     [SerializeField] MenuCreditsBehavior menuCredits;
 
-    BaseMenuBehavior[] menus {
-        get { return new BaseMenuBehavior[] {
-                menuMain,
-                menuNewGame,
-                menuSettings,
-                menuCredits
-            }; }
-    }
+    BaseMenuBehavior[] menus => new BaseMenuBehavior[] {
+        menuMain,
+        menuNewGame,
+        menuSettings,
+        menuCredits
+    };
 
 
     void Start() {

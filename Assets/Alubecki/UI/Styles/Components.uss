@@ -101,6 +101,7 @@ Button {
     rotate: -180deg;
     transition-property: rotate;
     transition-timing-function: ease-out-elastic;
+    background-color: rgb(171, 53, 53);
 }
 
 .line {

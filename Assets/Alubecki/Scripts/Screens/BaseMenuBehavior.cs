@@ -52,6 +52,22 @@ public abstract class BaseMenuBehavior : MonoBehaviour {
         DisableUI();
     }
 
+    protected virtual void OnMenuPreShow() {
+        //override if necessary
+    }
+
+    protected virtual void OnMenuShow() {
+        //override if necessary
+    }
+
+    protected virtual void OnMenuPreHide() {
+        //override if necessary
+    }
+
+    protected virtual void OnMenuHide() {
+        //override if necessary
+    }
+
     protected T RegisterButton<T>(T button, string buttonText, UnityEvent buttonEvent, Action additionalAction = null) where T : CustomButton{
 
         buttons.Add(button);
@@ -76,6 +92,8 @@ public abstract class BaseMenuBehavior : MonoBehaviour {
         Document.rootVisualElement.style.display = DisplayStyle.Flex;
         EnableUI();
 
+        OnMenuPreShow();
+
         if (animated) {
             isAnimatingShow = true;
             Body.AddToClassList("opacity-1-animated");
@@ -92,11 +110,9 @@ public abstract class BaseMenuBehavior : MonoBehaviour {
         OnMenuShow();
     }
 
-    protected virtual void OnMenuShow() {
-        //override if necessary
-    }
-
     public void Hide(bool animated) {
+
+        OnMenuPreHide();
 
         DisableUI();
 
@@ -110,14 +126,10 @@ public abstract class BaseMenuBehavior : MonoBehaviour {
 
     void ApplyHide() {
 
+        OnMenuHide();
+        
         StopOpacityAnimation();
         Document.rootVisualElement.style.display = DisplayStyle.None;
-
-        OnMenuHide();
-    }
-
-    protected virtual void OnMenuHide() {
-        //override if necessary
     }
 
     void StopOpacityAnimation() {
