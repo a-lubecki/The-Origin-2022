@@ -17,10 +17,17 @@ public class MenuNewGameBehavior : BaseMenuBehavior {
     public GameDifficulty SelectedDifficulty { get; private set; }
 
     public override Vector3[] CirclesPositions => new Vector3[] {
-        new Vector3(700, 0, 0),
-        new Vector3(500, 0, 0),
+        new Vector3(550, 0, 0),
+        new Vector3(450, 0, 0),
         new Vector3(300, 0, 0),
         Vector3.zero,
+    };
+
+    public override Vector3[] CirclesScales => new Vector3[] {
+        new Vector3(0.25f, 1, 1),
+        new Vector3(0.4f, 1, 1),
+        new Vector3(0.6f, 1, 1),
+        Vector3.one,
     };
 
 

@@ -11,11 +11,19 @@ public class MenuSettingsBehavior : BaseMenuBehavior {
     TabsSelector tabsSelector;
 
     public override Vector3[] CirclesPositions => new Vector3[] {
-        new Vector3(-500, 200, 0),
-        new Vector3(-500, 300, 0),
-        new Vector3(-500, 250, 0),
-        new Vector3(-500, 150, 0),
+        new Vector3(-530, 300, 0),
+        new Vector3(-550, 400, 0),
+        new Vector3(-540, 350, 0),
+        new Vector3(-520, 250, 0),
     };
+
+    public override Vector3[] CirclesScales => new Vector3[] {
+        new Vector3(1, 0.25f, 1),
+        new Vector3(1, 0.25f, 1),
+        new Vector3(1, 0.25f, 1),
+        new Vector3(1, 0.25f, 1),
+    };
+
 
     protected override void InitUI(UIDocument doc) {
 

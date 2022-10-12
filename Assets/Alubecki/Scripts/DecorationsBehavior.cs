@@ -20,7 +20,8 @@ public class DecorationsBehavior : BaseMenuBehavior {
     VisualElement topBackground;
     Label labelScreenTitle;
 
-    VisualElement[] circles = new VisualElement[CIRCLES_COUNT];
+    VisualElement[] circles = new VisualElement[CIRCLES_COUNT];//outer elements, used to scale circle
+    VisualElement[] circlesImage = new VisualElement[CIRCLES_COUNT];//inner elements containing image, used to rotate circle
     Vector3[] circlesHalfSizes = new Vector3[CIRCLES_COUNT];
 
 
@@ -31,7 +32,9 @@ public class DecorationsBehavior : BaseMenuBehavior {
         labelScreenTitle = root.Q<Label>("ScreenTitle");
 
         for (int i = 0; i < CIRCLES_COUNT; i++) {
-            circles[i] = root.Q<VisualElement>("Circle" + i);
+            var circle = root.Q<VisualElement>("Circle" + i);
+            circles[i] = circle;
+            circlesImage[i] = circle[0];
         }
 
         //wait for the first draw to calculate the circles bounds
@@ -54,7 +57,7 @@ public class DecorationsBehavior : BaseMenuBehavior {
 
         //animate circle rotation
         for (int i = 0; i < CIRCLES_COUNT; i++) {
-            AnimateCircleRotations(circles[i], ANIMATED_CIRCLE_ANGLES[i], 0.5f * i, 2);
+            AnimateCircleRotations(circlesImage[i], ANIMATED_CIRCLE_ANGLES[i], 0.5f * i, 2);
         }
     }
 
@@ -100,21 +103,21 @@ public class DecorationsBehavior : BaseMenuBehavior {
 
         for (int i = 0; i < CIRCLES_COUNT; i++) {
 
-            var circle = circles[i];
             var endScale = scales[i];
-            var endPos = positions[i] - circlesHalfSizes[i];//Vector3.Scale(circlesHalfSizes[i], endScale);//shift half the size of the circle to have it centered
+            var endPos = positions[i] - circlesHalfSizes[i];
 
-            var t = circle.transform;
+            var t = circles[i].transform;
+            var s = circles[i].style;
 
             if (durationSec <= 0) {
                 //instant
                 t.position = endPos;
-                t.scale = endScale;
+                s.scale = new Scale(endScale);
 
             } else {
                 //animated
                 DOTween.To(() => t.position, x => t.position = x, endPos, durationSec).SetEase(Ease.OutQuad);
-                DOTween.To(() => t.scale, x => t.scale = x, endScale, durationSec).SetEase(Ease.OutQuad);
+                DOTween.To(() => s.scale.value.value, x => s.scale = new Scale(x), endScale, durationSec).SetEase(Ease.OutQuad);
             }
         }
     }
