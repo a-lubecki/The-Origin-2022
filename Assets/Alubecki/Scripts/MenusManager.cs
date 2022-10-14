@@ -16,6 +16,9 @@ public class MenusManager : MonoBehaviour {
     [SerializeField] MenuSettingsBehavior menuSettings;
     [SerializeField] MenuCreditsBehavior menuCredits;
 
+    [SerializeField] AudioSource audioSourceSounds;
+    [SerializeField] AudioClip audioClipScreenChange;
+
     BaseMenuBehavior[] menus => new BaseMenuBehavior[] {
         menuMain,
         menuNewGame,
@@ -181,6 +184,8 @@ public class MenusManager : MonoBehaviour {
         if (menu != decorations) {
             decorations.MoveCircles(menu.CirclesPositions, menu.CirclesScales, 0.7f);
         }
+
+        audioSourceSounds.PlayOneShot(audioClipScreenChange);
 
         yield return new WaitForSeconds(0.4f);
 

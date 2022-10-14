@@ -18,6 +18,9 @@ public class CustomButton {
         Instance = instance;
         button = instance.Q<Button>();
 
+        button.clicked += PlaySoundButtonClick;
+        button.RegisterCallback<PointerOverEvent>(_ => ButtonsManager.Instance.PlaySoundButtonHover());
+
         Init(instance);
     }
 
@@ -41,6 +44,10 @@ public class CustomButton {
 
         button.RegisterCallback<PointerOverEvent>(_ => onPointerEnter());
         button.RegisterCallback<PointerOutEvent>(_ => onPointerExit());
+    }
+
+    void PlaySoundButtonClick() {
+        ButtonsManager.Instance.PlaySoundButtonClick();
     }
 
 }

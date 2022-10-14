@@ -33,7 +33,17 @@ public class TabsSelector {
         tabs = new List<VisualElement>(tabsContainer.Children());
         this.selector = selector;
 
-        radioButtonGroup.RegisterCallback<ChangeEvent<int>>(e => SelectTab(e.newValue));
+        radioButtonGroup.RegisterCallback<ChangeEvent<int>>(e => {
+            SelectTab(e.newValue);
+        });
+
+        foreach (var rb in radioButtons) {
+            rb.RegisterCallback<PointerOverEvent>(e => {
+                if (e.target == rb) {
+                    ButtonsManager.Instance.PlaySoundButtonHover();
+                }
+            });
+        }
     }
 
     public void SelectRadioButton(int index) {
@@ -48,7 +58,7 @@ public class TabsSelector {
         }
 
         if (selector != null) {
-
+            //change the little square y position
             var yPos = 0f;
 
             if (tabIndex >= 0 && tabIndex < radioButtons.Count) {
@@ -57,6 +67,8 @@ public class TabsSelector {
 
             selector.style.top = new StyleLength(new Length(yPos));
         }
+
+        ButtonsManager.Instance.PlaySoundButtonClick();
     }
 
 }
