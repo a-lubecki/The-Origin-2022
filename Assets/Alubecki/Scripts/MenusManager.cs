@@ -18,6 +18,7 @@ public class MenusManager : MonoBehaviour {
 
     [SerializeField] AudioSource audioSourceSounds;
     [SerializeField] AudioClip audioClipScreenChange;
+    [SerializeField] AudioClip audioClipStartGame;
 
     BaseMenuBehavior[] menus => new BaseMenuBehavior[] {
         menuMain,
@@ -149,6 +150,8 @@ public class MenusManager : MonoBehaviour {
 
         cameraManager.SelectVCamStartGame();
         postProcessingManager.SetWhiteScreen(true);
+
+        audioSourceSounds.PlayOneShot(audioClipStartGame);
 
         StartCoroutine(DoActionAfterDelay(2f, () => SceneManager.LoadScene(0)));
     }
